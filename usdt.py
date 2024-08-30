@@ -1,5 +1,5 @@
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, Application
-from telegram.ext import ContextTypes, CommandHandler, CallbackQueryHandler, MessageHandler, filters
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
+from telegram.ext import ContextTypes, CommandHandler, CallbackQueryHandler, MessageHandler, filters, Application
 import logging
 import json
 from pathlib import Path
@@ -968,7 +968,8 @@ async def update_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
 def main():
     # Create the Application instance with your bot token
-    application = Application.builder().token(os.getenv("TELEGRAM_API_TOKEN")).build()
+    application = Application.builder().token("7212606267:AAEkQ-ttmBekQDY638HHoW9cUcUMWKsoeZQ").build()
+
     # Add handlers
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.Regex("^🔗 Referral Link$"), referral_link_handler))
@@ -1007,5 +1008,6 @@ def main():
     # Start the bot
     application.run_polling()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    main()== '__main__':
     main()
