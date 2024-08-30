@@ -968,8 +968,7 @@ async def update_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
 def main():
     # Create the Application instance with your bot token
-    application = Application.builder().token("7212606267:AAEkQ-ttmBekQDY638HHoW9cUcUMWKsoeZQ").build()
-
+    application = Application.builder().token(os.getenv("TELEGRAM_API_TOKEN")).build()
     # Add handlers
     application.add_handler(CommandHandler("start", start))
     application.add_handler(MessageHandler(filters.Regex("^🔗 Referral Link$"), referral_link_handler))
@@ -1009,4 +1008,5 @@ def main():
     application.run_polling()
 
 if __name__ == '__main__':
+    main()ain__':
     main()
