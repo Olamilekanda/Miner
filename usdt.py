@@ -1019,11 +1019,4 @@ if __name__ == "__main__":
     flask_thread.start()
 
     # Run bot in the main thread
-    asyncio.run(main())let_address))
-
-    # Start the bot
-    application.run_polling()
-
-if __name__ == '__main__':
-    keep_alive()
-    main()
+    asyncio.run(main())
