@@ -38,7 +38,7 @@ NOTIFIED_USERS_FILE = Path("notified_users.json")
 REFERRAL_BONUS = 0.0002
 WELCOME_BONUS_AMOUNT = 0.0005
 BONUS_AMOUNT = 0.0001
-BOT_CREATION_DATE = datetime.datetime(2024, 9, 01)
+BOT_CREATION_DATE = datetime.datetime(2024, 9, 1)
 
 # Load or initialize data
 def load_json_file(file_path, default_value):
