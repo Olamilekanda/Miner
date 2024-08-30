@@ -1,3 +1,4 @@
-python-telegram-bot==13.7
-requests==2.31.0
-APScheduler==3.6.3
+discord.py==2.1.1  # Adjust version as needed
+requests==2.28.1
+numpy==1.23.4
+pandas==2.0.1
