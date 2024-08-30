@@ -1015,16 +1015,5 @@ def main():
 
     # Start the bot
     application.run_polling()
-
 if __name__ == '__main__':
-    main()et$'))
-
-    # Handle processing the wallet address text input
-    application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, process_wallet_address))
-
-    # Start the bot
-    application.run_polling()
-
-if __name__ == '__main__':
-    keep_alive()
     main()
