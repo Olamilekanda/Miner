@@ -17,7 +17,6 @@ def keep_alive():
     t = Thread(target=run)
     t.start()
 
-
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import ContextTypes, CommandHandler, CallbackQueryHandler, MessageHandler, filters, Application
 import logging
@@ -1029,5 +1028,5 @@ def main():
     application.run_polling()
 
 if __name__ == '__main__':
-    main()
     keep_alive()
+    main()
