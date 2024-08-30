@@ -1,3 +1,23 @@
+import os
+from flask import Flask
+from threading import Thread
+
+# Flask app setup for port binding
+app = Flask('')
+
+@app.route('/')
+def index():
+    return "Hello, World!"
+
+def run():
+    port = int(os.environ.get("PORT", 5000))  # Bind to the correct port
+    app.run(host='0.0.0.0', port=port)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+
+
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import ContextTypes, CommandHandler, CallbackQueryHandler, MessageHandler, filters, Application
 import logging
@@ -1010,3 +1030,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    keep_alive()
