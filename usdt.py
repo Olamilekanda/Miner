@@ -1,10 +1,19 @@
+import os
+import asyncio
 from flask import Flask
+from threading import Thread
+from telegram import Update
+from telegram.ext import Application, CommandHandler, CallbackQueryHandler, MessageHandler, filters, CallbackContext
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return "Hello, World!"
+
+def run_flask():
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
 
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import ContextTypes, CommandHandler, CallbackQueryHandler, MessageHandler, filters, Application
@@ -990,30 +999,31 @@ def main():
     application.add_handler(MessageHandler(filters.Regex("^ℹ️ Airdrop Info$"), airdrop_info_handler))
     application.add_handler(MessageHandler(filters.Regex("^🔑 Unlock Profit$"), collect_handler))
     application.add_handler(CallbackQueryHandler(button_handler))
-
     application.add_handler(MessageHandler(filters.Regex("^💳 Markets$"), miner_handler))
     application.add_handler(MessageHandler(filters.Regex("^💵 Deposit$"), deposit_handler))
-
-    # Add the new handlers for the deposit process
     application.add_handler(CallbackQueryHandler(currency_callback_handler, pattern='^deposit_'))
     application.add_handler(MessageHandler(filters.PHOTO, process_user_input))
     application.add_handler(MessageHandler(filters.Regex("^🚫 Cancel$"), cancel_handler))
-
-    # Handle the initial withdrawal command
-    # Handle the initial withdrawal command
     application.add_handler(MessageHandler(filters.Regex("^🏧 Withdraw$"), withdraw_handler))
-
-    # Handle the specific withdrawal options (amounts or cancel)
     application.add_handler(MessageHandler(filters.TEXT & filters.Regex("^(10|25|500|🚫 Cancel|✅ Confirm)$"), withdraw_handler))
-
-    # Handle setting the wallet address
     application.add_handler(MessageHandler(filters.Regex("^🔧 Set Wallet$"), set_wallet_handler))
     application.add_handler(CallbackQueryHandler(set_wallet_callback_handler, pattern='^set_wallet$'))
-
-    # Handle processing the wallet address text input
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, process_wallet_address))
 
     # Start the bot
     application.run_polling()
+
+if __name__ == "__main__":
+    # Run Flask and bot in parallel
+    flask_thread = Thread(target=run_flask)
+    flask_thread.start()
+
+    # Run bot in the main thread
+    asyncio.run(main())let_address))
+
+    # Start the bot
+    application.run_polling()
+
 if __name__ == '__main__':
+    keep_alive()
     main()
