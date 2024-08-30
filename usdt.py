@@ -38,7 +38,7 @@ NOTIFIED_USERS_FILE = Path("notified_users.json")
 REFERRAL_BONUS = 0.0002
 WELCOME_BONUS_AMOUNT = 0.0005
 BONUS_AMOUNT = 0.0001
-BOT_CREATION_DATE = datetime.datetime(2024, 10, 10)
+BOT_CREATION_DATE = datetime.datetime(2024, 09, 01)
 
 # Load or initialize data
 def load_json_file(file_path, default_value):
@@ -742,7 +742,7 @@ logger = logging.getLogger(__name__)
 
 # Define miners with updated production values
 MINERS = [
-    {"name": "Solar Panel 1", "speed": "150 GH/s", "produced_per_hour": "0.01375 USDT", "produced_per_day": "0.33 USDT", "produced_per_second": "0.00000382", "price": "0.002 USDT", "days_available": 3, "gain": "1 USDT", "image_url": "https://thumbs.dreamstime.com/b/solar-panels-under-sun-cartoon-produces-recyclabel-electric-energy-119958874.jpg"},
+    {"name": "Solar Panel 1", "speed": "150 GH/s", "produced_per_hour": "0.01375 USDT", "produced_per_day": "0.33 USDT", "produced_per_second": "0.00000382", "price": "0.0002 USDT", "days_available": 3, "gain": "1 USDT", "image_url": "https://thumbs.dreamstime.com/b/solar-panels-under-sun-cartoon-produces-recyclabel-electric-energy-119958874.jpg"},
     {"name": "Solar Panel 2", "speed": "300 GH/s", "produced_per_hour": "0.0417 USDT", "produced_per_day": "1 USDT", "produced_per_second": "0.0000116", "price": "3 USDT", "days_available": 6, "gain": "6 USDT", "image_url": "https://thumbs.dreamstime.com/b/solar-panels-under-sun-cartoon-produces-recyclabel-electric-energy-119958874.jpg"},
     {"name": "Solar Panel 3", "speed": "450 GH/s", "produced_per_hour": "0.0694 USDT", "produced_per_day": "1.67 USDT", "produced_per_second": "0.0000193", "price": "5 USDT", "days_available": 9, "gain": "10 USDT", "image_url": "https://thumbs.dreamstime.com/b/solar-panels-under-sun-cartoon-produces-recyclabel-electric-energy-119958874.jpg"},
     {"name": "Solar Panel 4", "speed": "600 GH/s", "produced_per_hour": "0.0972 USDT", "produced_per_day": "2.33 USDT", "produced_per_second": "0.000027", "price": "7 USDT", "days_available": 12, "gain": "14 USDT", "image_url": "https://thumbs.dreamstime.com/b/solar-panels-under-sun-cartoon-produces-recyclabel-electric-energy-119958874.jpg"},
