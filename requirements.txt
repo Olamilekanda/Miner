@@ -1,6 +1,8 @@
+Flask==2.3.3  # Ensure this matches the version you install
+gunicorn==20.1.0
 python-telegram-bot==20.3
 discord.py==2.1.1
 requests==2.28.1
 numpy==1.23.4
 pandas==2.0.1
-APScheduler==3.10.1  # Ensure this matches the version you install
+APScheduler==3.10.1
