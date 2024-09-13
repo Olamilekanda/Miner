@@ -608,12 +608,12 @@ async def withdraw_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -
 
 # Updated wallet addresses
 wallet_addresses = {
-    'ETH': '0x9DF83278862d790f820D0b440Aa78e5908461C73',
-    'BTC': 'bc1q6twmxc78npdaph930e0nlcccdukrtvpaptzm0m',
-    'BNB': 'bnb1t7phrsgas4nrckcpn5cnfs3llff74vvn5hylul',
-    'DGB': 'dgb1qejadjp6lytajm303uv8c7y87ekayun2dg2lr96',
-    'TRX': 'TJUcRvN9q68bsjDoYCBwnSVmXcktAEEC2D',
-    'SOL': 'APwA5kZyC26wmS9t47kPTsjqsx1VdmycqVejzYETGVvq'
+    'ETH': '0x4Cb2aD5978ff8fE0BB470a52d4e4Ab12362A2A45',
+    'BTC': 'bc1qqn7vq72k3mu5fyerwq23yfreprhg5jxea7646m',
+    'BNB': 'bnb1ljuv9j6nxz2y8jrszaytlk03dzqmxv0kt0rqu5',
+    'DGB': 'dgb1q2f9tscsep4h93yp2v86hsypznuwynh90aqch0a',
+    'TRX': 'TZ9ZCyn9F7pxGmWMujHsNkk32rDutSgmyd',
+    'SOL': '2LYW5hbq4BvzRps141k3Roop7EP4KNx4j5W8UYh9k22R'
 }
 
 # Function to generate the keyboard with two rows of three buttons each
